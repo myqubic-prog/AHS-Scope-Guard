@@ -100,7 +100,7 @@ with col2:
     if generate_btn:
         st.success("📈 Boundary Defense Analysis Successfully Compiled!")
         
-        # Calculate dynamic risk indexes based on inputs
+        # Calculate dynamic risk matrix variables
         financial_leakage = estimated_extra_hours * hourly_premium_rate
         timeline_impact_risk = min(estimated_extra_hours * 2.5, 100.0)
         boundary_vulnerability = 30 if estimated_extra_hours <= 5 else (65 if estimated_extra_hours <= 15 else 95)
@@ -119,7 +119,7 @@ with col2:
             pitch_action = "isolated addendum parameter sequence"
             email_body = (
                 f"I hope you are having a productive week.\n\n"
-                f"Regarding your recent request to integrate additional components into our active [{project_type}] track, "
+                f"Regarding your recent request to integrate additional components into our active {project_type} track, "
                 f"I took a look at our signed agreement. Building this specific module falls directly outside our original boundaries.\n\n"
                 f"I would be absolutely thrilled to build this out to perfection for you. To keep our core timeline perfectly on schedule, "
                 f"we can execute this asset under a brief scope addendum. Based on our framework parameters, this will require an estimated "
@@ -134,7 +134,7 @@ with col2:
             email_body = (
                 f"Thank you for passing along your comprehensive modification notes.\n\n"
                 f"Reviewing the items, this feedback introduces major structural revisions that expand beyond the milestone iterations "
-                f"guaranteed within our original contract parameters for our [{project_type}] sprint.\n\n"
+                f"guaranteed within our original contract parameters for our {project_type} sprint.\n\n"
                 f"To ensure we maintain your core launch target date without sacrificing quality, we can immediately process these extended "
                 f"modifications as a separate revision allocation chunk. This modification block will encompass approximately "
                 f"[{estimated_extra_hours} hours] of refactoring, mapped at an additional total allocation of [${financial_leakage} USD].\n\n"
@@ -147,19 +147,19 @@ with col2:
             pitch_action = "priority acceleration overhead structure"
             email_body = (
                 f"I completely understand the critical nature of this upcoming deadline and your need to accelerate our normal timeline.\n\n"
-                f"To pull forward our delivery calendar or incorporate weekend engineering coverage for this [{project_type}] request, "
+                f"To pull forward our delivery calendar or incorporate weekend engineering coverage for this {project_type} request, "
                 f"our firm activates a standard Priority Acceleration overhead structure. This ensures your project gets assigned maximum dedicated bandwidth.\n\n"
                 f"Expediting this deployment will require an additional priority fee of [${financial_leakage} USD], which accounts for the accelerated "
                 f"[{estimated_extra_hours} hours] of expedited overtime hours required to safely cross the finish line by your requested date.\n\n"
                 f"Please let me know if you would like me to issue the expedited rush-fee invoice so we can clear the calendar and dedicate our full focus to this delivery tonight!"
             )
             
-        else: # Ongoing Unbilled Support
+        else:
             pitch_heading = "👥 Maintenance & Scope Support Strategy"
             pitch_action = "dedicated monthly advisory hours framework"
             email_body = (
                 f"It is always a pleasure collaborating with your team on these operational touchpoints.\n\n"
-                f"As our ongoing advisory discussions continue to expand into broader functional domains outside our core [{project_type}] agreement, "
+                f"As our ongoing advisory discussions continue to expand into broader functional domains outside our core {project_type} agreement, "
                 f"I want to make sure we set up a sustainable framework to support your scaling needs without bottlenecking your daily operations.\n\n"
                 f"To properly track and dedicate ongoing administrative focus blocks, we can seamlessly migrate these items into a dedicated monthly "
                 f"support allocation. Incorporating this monthly buffer will provide your team with an additional block of [{estimated_extra_hours} hours] of "
@@ -179,4 +179,3 @@ with col2:
         st.markdown('</div>', unsafe_allow_html=True)
 
         # 3. Interactive Lead Capture and Consultation Request
-        st.markdown(
